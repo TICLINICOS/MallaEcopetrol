@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
+    <!-- <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="/static/js/icons.js"></script>
+
+    <title>Malla Ecopetrol</title>
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-light blue fixed-top">
+    <button id="sidebarCollapse" class="btn navbar-btn">
+      <i class="fas fa-lg fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="">
+      <!-- <h3 id="logo">Clinicos</h3> -->
+      <img  class="logo" src="/static/images/LogoClinicosFondoOscuroHorizontal.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" id="link" href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          LogOut<span class="sr-only">(current) </span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" id="link" href="#">
+          <i class="fas fa-id-card"></i>Contact Us</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrapper fixed-left">
+    <nav id="sidebar">
+
+      <ul class="list-unstyled components">
+        <li>
+          <a href="/mainPage"><i class="fas fa-home"></i>Perfil</a>
+        </li>
+        <li>
+          <a href="/DatosPaciente"><i class="fas fa-clipboard"></i>Ingreso Paciente</a>
+        </li>
+        <li>
+          <a href="/ConsultaDatos"><i class="fas fa-user-cog"></i>Consulta Datos</a>
+        </li>
+      </ul>
+    </nav>
+        <!-- <li>
+          <a href=""><i class="fas fa-hands-helping"></i>Services</a>
+        </li>
+        <li>
+          <a href=""><i class="fas fa-info"></i>About</a>
+        </li> -->
+      </ul>
+    </nav>
+
+    <div id="content">
+      <h1>Datos del Paciente</h1>
+      <form class="row g-3 needs-validation align-items-center" novalidate>
+        <div class="col-md-2 my-1">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Tipo de documento</label>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected value="">CC</option>
+            <option value="">TI</option>
+            <option value="">RC</option>
+            <option value="">CE</option>
+            <option value="">PA</option>
+            <option value="">PEP</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom02" class="form-label">Número de documento</label>
+          <input type="text" class="form-control" id="validationCustom02" value="" required>
+        </div>
+        <div class="col-md-7">
+          <label for="validationCustom01" class="form-label">Nombre Completo</label>
+          <input type="text" class="form-control" id="validationCustom01" value="" required>
+        </div>
+        <div class="col-md-2">
+          <label for="validationCustom02" class="form-label">Edad</label>
+          <input type="text" class="form-control" id="validationCustom02" value="" required>
+        </div>
+        <div class="col-md-2 my-2">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Unidad de medida</label>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected value="">Años</option>
+            <option value="">Meses</option>
+            <option value="">Días</option>
+          </select>
+        </div>
+        <div class="col-md-2 my-2">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Sexo</label>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected value="">MASCULINO</option>
+            <option value="">FEMENINO</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">Lugar de Residencia</label>
+          <input type="text" class="form-control" id="validationCustom01" value="" required>
+        </div>
+        <br><br><br>
+        <div class="col-12  my-5">
+          <button class="btn btn-primary" type="submit">Crear Usuario</button>
+        </div>
+      </form>
+      <br><br><br>
+     
+<!-- Nav Tabs -->
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Valoración</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Diagnóstico</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Examen Clinico</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact" aria-selected="false">Conducta</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact3" role="tab" aria-controls="nav-contact" aria-selected="false">Dispositivos Médicos</a>
+        </div>
+      </nav>
+    
+      <div class="tab-content" id="nav-tabContent">
+
+        <!-- Valoración -->
+        <br>
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <form class="row g-3 needs-validation align-items-center" novalidate>
+            <div class="col-md-3">
+              <label for="validationCustom01" class="form-label font-weight-bold">Número de valoración</label>
+              <input type="text" class="form-control" id="validationCustom01" value="" required>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom02" class="form-label font-weight-bold">Fecha de presentacion</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-6 my-1">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Nombre de la valoración</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">Evaluacion individual del riesgo</option>
+                <option value="">Evaluacion del riesgo cardiovascular</option>
+                <option value="">COVID-19</option>
+                <option value="">POS COVID-19</option>
+                <option value="">POS COVID-19 Alto riesgo</option>
+                <option value="">Diferida</option>
+                <option value="">Preferencial</option>
+                <option value="">PAD</option>
+              </select>
+            </div>
+            <div class="col-md-3 my-2">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Tipo de valoración</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">Control</option>
+                <option value="">Primera vez</option>
+                <option value="">Presentado en base</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom02" class="form-label font-weight-bold">Fecha de valoracion (Efectiva)</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom02" class="form-label font-weight-bold">Oportunidad en la valoración</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-3">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Modalidad de la consulta</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">Presencial</option>
+                <option value="">Telemedicina</option>
+              </select>
+            </div>
+            <div class="col-md-3 my-2">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">La visita fue exitosa</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">Si</option>
+                <option value="">No</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label for="validationCustom02" class="form-label font-weight-bold">Causal de visita fallida o novedad</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+
+            <div class="col-md-3 font-weight-bold">
+              <label class="mr-sm-2" for="inlineFormCustomSelect">Estado  PAD</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">Ingresó</option>
+                <option value="">No ingresó</option>
+                <option value="">N/A</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Nombre de la parsona que presento el paciente</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+
+            <div class="col-md-3 ">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Cargo del solicitante </label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">MEGA</option>
+                <option value="">MEPA</option>
+                <option value="">Clinicos</option>
+                <option value="">Teleorientación</option>
+              </select>
+            </div>
+          </form>  
+        </div>
+
+        <!-- Diagnostico -->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <form class="row g-3 needs-validation align-items-center" novalidate>
+            <div class="col-md-4 my-2">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Tipo de diagnostico</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">1 = Impresión diagnóstica</option>
+                <option value="">2 = Confirmado nuevo</option>
+                <option value="">3 = Confirmado repetido</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Finalidad de consulta RIPS</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">01 = Atención del parto (puerperio)</option>
+                <option value="">02 = Atención del recién nacido</option>
+                <option value="">04 = Detección de alteraciones de crecimiento y desarrollo del menor de diez años</option>
+                <option value="">05 = Detección de alteración del desarrollo joven</option>
+                <option value="">06 = Detección de alteraciones del embarazo</option>
+                <option value="">07 = Detección de alteraciones del adulto</option>
+                <option value="">08 = Detección de alteraciones de agudeza visual</option>
+                <option value="">09 = Detección de enfermedad profesional</option>
+                <option value="">10 = No aplica</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Causa externa de la consulta</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">01 = Accidente de trabajo</option>
+                <option value="">02 = Accidente de tránsito</option>
+                <option value="">03 = Accidente rábico</option>
+                <option value="">04 = Accidente ofídico</option>
+                <option value="">05 = Otro tipo de accidente</option>
+                <option value="">06 = Evento catastrófico</option>
+                <option value="">07 = Lesión por agresión</option>
+                <option value="">08 = Lesión auto infligida</option>
+                <option value="">09 = Sospecha de maltrato físico</option>
+                <option value="">10 = Sospecha de abuso sexual</option>
+                <option value="">11 = Sospecha de violencia sexual</option>
+                <option value="">12 = Sospecha de maltrato emocional</option>
+                <option value="">13 = Enfermedad general</option>
+                <option value="">14 = Enfermedad profesional</option>
+                <option value="">15 = Otra</option>
+              </select>
+            </div>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Código CIE 10 principal</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-8">
+              <label for="validationCustom02" class="form-label font-weight-bold">Descripción diagnostico cie 10 (principal)</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Código CIE 10 REL 1</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-8">
+              <label for="validationCustom02" class="form-label font-weight-bold">Descripción diagnostico cie 10 REL 1</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Código CIE 10 REL 2</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-8">
+              <label for="validationCustom02" class="form-label font-weight-bold">Descripción diagnostico cie 10 REL 2</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+          </form>  
+        </div>
+
+        <!-- Examen Clinico -->
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <form class="row g-3 needs-validation align-items-center" novalidate>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Hipertension arterial (HTA)</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Diabetes Mellitus (DM)</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Obesidad</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Enfermedad renal cronica </label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Inmunosuprimido</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Cancer</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Asma</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4 my-1">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Escala New2 </label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="">Bajo</option>
+                <option value="">Medio</option>
+                <option value="">Alto</option>
+                <option value="">No refiere</option>
+              </select>
+            </div>
+            <div class="col-md-4 my-1">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Escala Call </label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="">Bajo</option>
+                <option value="">Medio</option>
+                <option value="">Alto</option>
+                <option value="">No refiere</option>
+              </select>
+            </div>
+          </form>  
+        </div>
+
+        <!--Conducta-->
+        <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <form class="row g-3 needs-validation align-items-center" novalidate>
+            <div class="col-auto my-2">
+              <label class="mr-sm-2  font-weight-bold" for="inlineFormCustomSelect">Tipo de seguimiento </label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="">24 horas</option>
+                <option value="">48 horas</option>
+                <option value="">72 horas</option>
+                <option value="">No</option>
+              </select>
+            </div>
+            <div class="col-auto my-2">
+              <label class="mr-sm-2  font-weight-bold" for="inlineFormCustomSelect">Remision de urgencias </label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="">Si</option>
+                <option value="">No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Remisión de laboratorios</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label class="mr-sm-2 my-2 font-weight-bold" for="inlineFormCustomSelect">Envio plan de manejo</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="">Si</option>
+                <option value="">No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Interconsultas solicitadas</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Envió formulas medicas menores de 60 años</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Audifarma (código)</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Nutrición</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Trabajo social</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+
+            <div class="col-md-4 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Psicología</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            
+            <div class="col-md-4">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Profesional que realizo la consulta</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="">Ledys Henao</option>
+                <option value="">Stephany Arias</option>
+                <option value="">Fernanda Sanchez</option>
+                <option value="">Daniela Fernandez</option>
+                <option value="">Laura Alvarez</option>
+                <option value="">Juan Parra</option>
+                <option value="">Oscar Sotomayor</option>
+                <option value="">Laura Zamudio</option>
+                <option value="">Catherine Hernandez</option>
+                <option value="">Catalina Fernandez</option>
+                <option value="">Diego Niño</option>
+                <option value="">Javier Rodriguez</option>
+                <option value="">Kimberly Botero</option>
+                <option value="">Angela Aguilar</option>
+                <option value="">Jose Rios</option>
+                <option value="">Lina Alvarado</option>
+                <option value="">Lila Quintero</option>
+                <option value="">Maira Murcia</option>
+                <option value="">Manuel Valdivieso</option>
+                <option value="">David Lombana</option>
+                <option value="">Diana Ortiz</option>
+                <option value="">Jennifer Pinedo</option>
+                <option value="">Diana Claros</option>
+              </select>
+            </div>
+          </form> 
+        </div>
+          
+         <!--Dispositivos Médicos-->
+        <div class="tab-pane fade" id="nav-contact3" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <form class="row g-3 needs-validation align-items-center" novalidate>
+            <div class="col-md-4 my-2">
+              <label class="mr-sm-2 font-weight-bold" for="inlineFormCustomSelect">Entrega de Kit (Pulsximetro/Termometro) </label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="">SI</option>
+                <option value="">NO</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Fecha de solicitud del pulsoximetro</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label font-weight-bold">Fecha de entrega de pulsoximetro </label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-3 my-2">
+              <label for="validationCustom02" class="form-label font-weight-bold">Fecha de recoleccion</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+          </form>  
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+    
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/static/js/script.js"></script> 
+  </body>
+</html>

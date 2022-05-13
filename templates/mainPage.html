@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
     <!-- <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css"> -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script src="icons.js"></script>
+    <script src="/static/js/icons.js"></script>
 
     <title>Malla Ecopetrol</title>
   </head>
@@ -23,7 +23,7 @@
     </button>
     <a class="navbar-brand" href="">
       <!-- <h3 id="logo">Clinicos</h3> -->
-      <img  class="logo" src="LogoClinicosFondoOscuroHorizontal.png" alt="">
+      <img  class="logo" src="/static/images/LogoClinicosFondoOscuroHorizontal.png" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -46,31 +46,29 @@
 
   <div class="wrapper fixed-left">
     <nav id="sidebar">
-      <!-- <div class="sidebar-header">
-        <h3><i class="fas fa-user"></i>Username</h3>
-      </div> -->
 
       <ul class="list-unstyled components">
         <li>
-          <a href="mainPage.html"><i class="fas fa-home"></i>Perfil</a>
+          <a href="/mainPage"><i class="fas fa-home"></i>Perfil</a>
         </li>
         <li>
-          <a href="DatosPaciente.html"><i class="fas fa-clipboard"></i>Ingreso Paciente</a>
+          <a href="/DatosPaciente"><i class="fas fa-clipboard"></i>Ingreso Paciente</a>
         </li>
         <li>
-          <a href="ConsultaDatos.html"><i class="fas fa-user-cog"></i>Consulta Datos</a>
+          <a href="/ConsultaDatos"><i class="fas fa-user-cog"></i>Consulta Datos</a>
         </li>
-        <!-- <li>
-          <a href=""><i class="fas fa-hands-helping"></i>Services</a>
-        </li>
-        <li>
-          <a href=""><i class="fas fa-info"></i>About</a>
-        </li> -->
       </ul>
     </nav>
 
     <div id="content">
-      <h1>Prueba</h1>
+      <div class="card text-center  " style="width: 18rem;">
+        <img class="card-img-top" src="/static/images/userPerfil.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Martha Yanet Camacho Ojeda</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Analista de desarrollo</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div> 
     </div>
   </div>
     
@@ -79,6 +77,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="/static/js/script.js"></script> 
   </body>
 </html>
